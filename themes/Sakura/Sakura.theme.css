@@ -1,0 +1,54 @@
+/**
+ * @name Sakura
+ * @author ziipawz
+ * @version 1.0.0
+ * @description A soft pink Sakura-themed Discord theme.
+ * @source https://github.com/fortnutlover132/discord-themes/tree/main/themes/Sakura
+ */
+
+/*
+ * Sakura Theme
+ *
+ * This is the main configuration file.
+ * Change the variables below to quickly customize
+ * the background and colors of the theme.
+ */
+
+@import url("https://raw.githack.com/fortnutlover132/discord-themes/main/themes/Sakura/core.css");
+
+:root {
+    /* =========================
+       BACKGROUND
+       ========================= */
+
+    --background: url("");
+
+
+    /* =========================
+       MAIN COLORS
+       ========================= */
+
+    --accent: #f5a6c8;
+    --accent-light: #ffd4e5;
+    --accent-dark: #c96f98;
+
+    --accent-transparent: rgba(245, 166, 200, 0.50);
+    --accent-transparent-dark: rgba(201, 111, 152, 0.40);
+
+
+    /* =========================
+       TEXT
+       ========================= */
+
+    --text-primary: #ffffff;
+    --text-secondary: #f6dce7;
+
+
+    /* =========================
+       BACKGROUND OVERLAYS
+       ========================= */
+
+    --overlay-light: rgba(255, 255, 255, 0.08);
+    --overlay-medium: rgba(40, 20, 30, 0.45);
+    --overlay-dark: rgba(20, 10, 15, 0.70);
+}
