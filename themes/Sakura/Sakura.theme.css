@@ -1,54 +1,56 @@
 /**
  * @name Sakura
  * @author ziipawz
- * @version 1.0.0
- * @description A soft pink Sakura-themed Discord theme.
+ * @version 1.1.0
+ * @description A soft pink glassy Sakura-themed Discord theme.
  * @source https://github.com/fortnutlover132/discord-themes/tree/main/themes/Sakura
  */
 
-/*
- * Sakura Theme
- *
- * This is the main configuration file.
- * Change the variables below to quickly customize
- * the background and colors of the theme.
- */
-
-@import url("https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/core.css");
+@import url("https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/core.css?v=1.1.0");
 
 :root {
-    /* =========================
+
+    /* =========================================================
        BACKGROUND
-       ========================= */
+       ========================================================= */
 
     --background: url("https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/backgrounds/main.jpg");
 
 
-    /* =========================
-       MAIN COLORS
-       ========================= */
+    /* =========================================================
+       SAKURA COLORS
+       ========================================================= */
 
-    --accent: #f5a6c8;
-    --accent-light: #ffd4e5;
-    --accent-dark: #c96f98;
+    --sakura-pink: #e78fb5;
+    --sakura-light: #ffd8e8;
+    --sakura-dark: #a95279;
 
-    --accent-transparent: rgba(245, 166, 200, 0.50);
-    --accent-transparent-dark: rgba(201, 111, 152, 0.40);
+    --sakura-text: #f8eef3;
+    --sakura-text-muted: #d9c4ce;
 
-
-    /* =========================
-       TEXT
-       ========================= */
-
-    --text-primary: #ffffff;
-    --text-secondary: #f6dce7;
+    --sakura-dark-text: #432d38;
+    --sakura-dark-muted: #755c68;
 
 
-    /* =========================
-       BACKGROUND OVERLAYS
-       ========================= */
+    /* =========================================================
+       GLASS COLORS
+       ========================================================= */
 
-    --overlay-light: rgba(255, 255, 255, 0.08);
-    --overlay-medium: rgba(40, 20, 30, 0.45);
-    --overlay-dark: rgba(20, 10, 15, 0.70);
+    --glass-dark: rgba(34, 24, 31, 0.72);
+    --glass-dark-soft: rgba(34, 24, 31, 0.58);
+
+    --glass-pink: rgba(111, 57, 82, 0.58);
+    --glass-pink-soft: rgba(179, 100, 136, 0.24);
+
+    --glass-light: rgba(255, 235, 244, 0.18);
+
+    --glass-border: rgba(255, 190, 216, 0.18);
+
+
+    /* =========================================================
+       HOVERS
+       ========================================================= */
+
+    --hover-pink: rgba(231, 143, 181, 0.20);
+    --selected-pink: rgba(231, 143, 181, 0.30);
 }
