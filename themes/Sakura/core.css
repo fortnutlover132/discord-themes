@@ -1,3 +1,5 @@
+/* SAKURA BUILD 1.4 — Made by ziipawz */
+
 :root{
      --background: url('https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/backgrounds/main.jpg');
      --activetext-colour: white;
@@ -1180,94 +1182,194 @@
         background-color: var(--primary3-colour)!important; 
     }
 
-/* Top bar */
+
+/* ============================================================
+   SAKURA POLISH LAYER
+   ============================================================ */
+
+/* ----- Top bar branding ----- */
+
 #app-mount .title_c38106::before {
-    content: none !important;
-    display: none !important;
+    content: "Made by ziipawz" !important;
+    display: block !important;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 226, 239, 0.88) !important;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    pointer-events: none;
 }
 
 #app-mount .title_c38106 {
-    background-color: var(--secondary3-colour);
-    border-bottom: 3px solid var(--primary3-colour);
+    background-color: rgba(48, 29, 40, 0.64) !important;
+    border-bottom: 2px solid rgba(255, 119, 176, 0.70) !important;
 }
 
 
-/* ============================================================
-   SAKURA CLEANUP LAYER
-   Keeps the original working transparency system, but removes
-   the blocky GGO message-card look.
-   ============================================================ */
+/* ----- Chat background ----- */
 
-/* Cleaner chat: no giant rectangle behind every individual message */
+#app-mount .chatContent_f75fb0,
+#app-mount .messagesWrapper__36d07 {
+    background: rgba(49, 31, 42, 0.16) !important;
+}
+
+
+/* ----- Rounded message bubbles instead of full-width slabs ----- */
+
 #app-mount .message__5126c {
-    padding-left: 72px;
-    padding-right: 32px;
     background: transparent !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+#app-mount .message__5126c.cozyMessage__5126c .contents_c19a55,
+#app-mount .message__5126c.compact_c19a55 .contents_c19a55 {
+    display: table !important;
+    width: auto !important;
+    max-width: calc(100% - 24px) !important;
+    background: rgba(78, 51, 65, 0.30) !important;
+    border-radius: 12px !important;
+    padding: 7px 12px !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 190, 216, 0.08);
 }
 
 #app-mount .message__5126c.cozyMessage__5126c .container_b7e1cb,
-#app-mount .message__5126c.cozyMessage__5126c .contents_c19a55,
-#app-mount .message__5126c.compact_c19a55 .contents_c19a55,
 #app-mount .message__5126c.compact_c19a55 .container_b7e1cb {
     background: transparent !important;
 }
 
-/* A subtle row tint only while hovering */
 #app-mount .message__5126c:hover {
-    background: rgba(82, 45, 64, 0.22) !important;
+    background: rgba(255, 143, 189, 0.06) !important;
 }
 
-/* Keep message text readable over the Sakura image */
+#app-mount .message__5126c:hover .contents_c19a55 {
+    background: rgba(102, 58, 78, 0.38) !important;
+}
+
 #app-mount .messageContent_c19a55,
 #app-mount .markup__75297 {
-    color: rgba(255, 255, 255, 0.96) !important;
-    text-shadow: 0 1px 3px rgba(24, 12, 19, 0.9);
+    color: rgba(255,255,255,0.97) !important;
+    text-shadow: 0 1px 2px rgba(24, 12, 18, 0.72);
 }
 
-#app-mount .username_c19a55 {
-    font-weight: 650;
-    text-shadow: 0 1px 3px rgba(24, 12, 19, 0.8);
+
+/* ----- Attachments / embeds also rounded ----- */
+
+#app-mount .embedFull__623de,
+#app-mount .messageAttachment__5dae1,
+#app-mount [class*="imageWrapper_"] {
+    border-radius: 12px !important;
 }
 
-/* Give the whole chat ONE consistent glass sheet instead of message boxes */
-#app-mount .chatContent_f75fb0,
-#app-mount .messagesWrapper__36d07 {
-    background: rgba(48, 30, 41, 0.22) !important;
+
+/* ----- Fix the ugly black gradient around the text box ----- */
+
+#app-mount .form_f75fb0,
+#app-mount .form_f75fb0::before,
+#app-mount .form_f75fb0::after,
+#app-mount [class*="channelBottomBarArea_"],
+#app-mount [class*="channelBottomBarArea_"]::before,
+#app-mount [class*="channelBottomBarArea_"]::after {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
 }
 
-/* Cleaner composer */
+
+/* Actual composer */
+
+#app-mount .form_f75fb0 .channelTextArea_f75fb0 {
+    background: transparent !important;
+    margin-bottom: 10px;
+}
+
 #app-mount .form_f75fb0 .scrollableContainer__74017 {
-    background: rgba(39, 24, 34, 0.66) !important;
-    border: 1px solid rgba(255, 151, 194, 0.62);
-    border-radius: 10px;
-}
-
-/* Softer DM/sidebar selection instead of a chunky pill */
-#app-mount .privateChannels_e6b769 .interactiveSelected__972a0,
-#app-mount .privateChannels_e6b769 .channel__972a0:hover {
-    background: rgba(226, 103, 157, 0.22) !important;
-}
-
-/* Make the user panel feel integrated with the theme */
-#app-mount .panels__5e434 {
-    background: rgba(60, 35, 50, 0.72) !important;
+    background: rgba(45, 27, 38, 0.72) !important;
+    background-image: none !important;
+    border: 1px solid rgba(255, 150, 194, 0.62) !important;
+    border-radius: 14px !important;
+    box-shadow:
+        0 4px 14px rgba(20, 10, 16, 0.16),
+        inset 0 0 0 1px rgba(255,255,255,0.025) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 153, 196, 0.35);
 }
 
-/* Profile/member surfaces: dark glass rather than near-black slabs */
+
+/* ----- Sidebar: soften the giant rectangular selections ----- */
+
+#app-mount .privateChannelsHeaderContainer__99e7c,
+#app-mount .channel__972a0,
+#app-mount .containerDefault_c69b6d .wrapper__2ea32 {
+    border-radius: 12px !important;
+}
+
+#app-mount .privateChannelsHeaderContainer__99e7c {
+    background: rgba(178, 73, 120, 0.34) !important;
+}
+
+#app-mount .channel__972a0:hover,
+#app-mount .interactiveSelected__972a0 {
+    background: rgba(236, 122, 171, 0.22) !important;
+}
+
+
+/* ----- User controls ----- */
+
+#app-mount .panels__5e434 {
+    border-radius: 12px 12px 0 0 !important;
+    background: rgba(62, 36, 51, 0.76) !important;
+    border: 1px solid rgba(255, 171, 207, 0.20) !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#app-mount .sidebar__5e434::after {
+    background: transparent !important;
+}
+
+
+/* ----- Member/profile side surface ----- */
+
 #app-mount .container_c8ffbb,
 #app-mount .members_c8ffbb {
-    background-color: rgba(38, 23, 32, 0.58) !important;
+    background-color: rgba(39, 24, 33, 0.56) !important;
 }
 
-/* Sakura title bar */
-#app-mount .title_c38106::before {
-    color: rgba(255, 218, 234, 0.82) !important;
+
+/* ----- BUILD 1.4: hard-kill Discord's composer fades/gradients ----- */
+#app-mount [class*="form_"],
+#app-mount [class*="form_"]::before,
+#app-mount [class*="form_"]::after,
+#app-mount [class*="channelBottomBarArea_"],
+#app-mount [class*="channelBottomBarArea_"]::before,
+#app-mount [class*="channelBottomBarArea_"]::after,
+#app-mount [class*="bottomBar_"],
+#app-mount [class*="bottomBar_"]::before,
+#app-mount [class*="bottomBar_"]::after {
+    background-image: none !important;
+    box-shadow: none !important;
 }
 
-#app-mount .title_c38106 {
-    background-color: rgba(44, 27, 38, 0.66) !important;
-    border-bottom: 2px solid rgba(255, 116, 174, 0.72) !important;
+#app-mount .form_f75fb0 {
+    background: transparent !important;
+}
+
+/* Rounded bubble look: constrain the visible tint to message content only */
+#app-mount .message__5126c .contents_c19a55 {
+    border-radius: 12px !important;
+}
+
+#app-mount .message__5126c.cozyMessage__5126c .contents_c19a55 {
+    background: rgba(78, 51, 65, 0.30) !important;
+    padding: 7px 12px !important;
+}
+
+#app-mount .message__5126c:hover .contents_c19a55 {
+    background: rgba(102, 58, 78, 0.38) !important;
 }
