@@ -201,3 +201,200 @@
 #app-mount .privateChannels_e6b769 {
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55);
 }
+
+/* ============================================================
+   SAKURA GLASS / READABILITY PATCH
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+   GLOBAL TEXT COLORS
+   ------------------------------------------------------------ */
+
+#app-mount {
+    --header-primary: #3f2936 !important;
+    --header-secondary: #725967 !important;
+
+    --text-normal: #4b3441 !important;
+    --text-muted: #806b76 !important;
+
+    --text-default: #4b3441 !important;
+    --text-secondary: #725967 !important;
+    --text-tertiary: #947f8a !important;
+
+    --channels-default: #654b59 !important;
+    --interactive-normal: #725967 !important;
+    --interactive-hover: #3f2936 !important;
+    --interactive-active: #34212c !important;
+    --interactive-muted: #a88f9c !important;
+}
+
+
+/* ------------------------------------------------------------
+   GLASS - LEFT DM SIDEBAR
+   ------------------------------------------------------------ */
+
+#app-mount .privateChannels_e6b769,
+#app-mount .privateChannels_e6b769 .scroller__99e7c {
+    background: rgba(255, 235, 244, 0.34) !important;
+
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+}
+
+
+/* ------------------------------------------------------------
+   GLASS - FRIENDS LIST
+   ------------------------------------------------------------ */
+
+#app-mount .peopleColumn__133bf {
+    background: rgba(255, 244, 249, 0.24) !important;
+
+    backdrop-filter: blur(8px) saturate(115%);
+    -webkit-backdrop-filter: blur(8px) saturate(115%);
+}
+
+
+/* Give each friend row just a tiny bit of separation */
+
+#app-mount .peopleListItem_cc6179 {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px;
+}
+
+#app-mount .peopleListItem_cc6179:hover {
+    background: rgba(255, 196, 218, 0.25) !important;
+}
+
+
+/* ------------------------------------------------------------
+   GLASS - TOP BAR
+   ------------------------------------------------------------ */
+
+#app-mount .container__133bf .container__9293f {
+    background: rgba(255, 238, 246, 0.30) !important;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* ------------------------------------------------------------
+   SEARCH BAR
+   ------------------------------------------------------------ */
+
+#app-mount .tabBody__133bf .searchBar__5ec2f {
+    background: rgba(255, 255, 255, 0.40) !important;
+
+    border: 1px solid rgba(217, 139, 171, 0.28) !important;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* ------------------------------------------------------------
+   ACTIVE NOW COLUMN - LIGHT PINK GLASS
+   ------------------------------------------------------------ */
+
+#app-mount .container__133bf .nowPlayingColumn__133bf,
+#app-mount .container__133bf .container__7d20c {
+    background: rgba(255, 221, 234, 0.28) !important;
+
+    backdrop-filter: blur(12px) saturate(120%);
+    -webkit-backdrop-filter: blur(12px) saturate(120%);
+}
+
+
+/* Activity cards */
+
+#app-mount .nowPlayingColumn__133bf .itemCard__7e549 {
+    background: rgba(255, 231, 240, 0.62) !important;
+
+    border: 1px solid rgba(214, 132, 166, 0.25) !important;
+
+    box-shadow:
+        0 4px 18px rgba(104, 62, 81, 0.10) !important;
+}
+
+#app-mount .nowPlayingColumn__133bf .itemCard__7e549:hover {
+    background: rgba(255, 215, 231, 0.76) !important;
+}
+
+
+/* Inside activity cards */
+
+#app-mount .nowPlayingColumn__133bf .itemCard__7e549 .body__00943 {
+    background: rgba(255, 245, 249, 0.28) !important;
+}
+
+
+/* ------------------------------------------------------------
+   REMOVE WEIRD BOTTOM-LEFT BAR
+   ------------------------------------------------------------ */
+
+/*
+ * Discord creates an extra sidebar layer using ::after.
+ * Kill it completely.
+ */
+
+#app-mount .sidebar__5e434::after {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* Activity panel above user controls */
+
+#app-mount .activityPanel__5e434 {
+    background: transparent !important;
+    border: none !important;
+}
+
+
+/* User controls / nameplate */
+
+#app-mount .panels__5e434 {
+    background: rgba(67, 42, 60, 0.78) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 190, 216, 0.25) !important;
+    box-shadow: none !important;
+}
+
+
+/* ------------------------------------------------------------
+   DM SIDEBAR TEXT
+   ------------------------------------------------------------ */
+
+#app-mount .privateChannelsHeaderContainer__99e7c {
+    color: #674956 !important;
+}
+
+#app-mount .channel__972a0 {
+    color: #513744 !important;
+}
+
+
+/* Hovered / selected DM */
+
+#app-mount .channel__972a0:hover,
+#app-mount .interactiveSelected__972a0 {
+    background: rgba(255, 194, 218, 0.27) !important;
+}
+
+
+/* ------------------------------------------------------------
+   GLASS EDGES
+   ------------------------------------------------------------ */
+
+#app-mount .privateChannels_e6b769,
+#app-mount .peopleColumn__133bf,
+#app-mount .nowPlayingColumn__133bf {
+    border-color: rgba(217, 144, 173, 0.18) !important;
+}
