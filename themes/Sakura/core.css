@@ -14,13 +14,11 @@
  }
    
  /*
- Theme Owned and Made by VaporousCreeper#9514
-   
- Background Img: https://wpblink.com/sites/default/files/wallpaper/anime/66761/sword-art-online-ii-wallpapers-hd-66761-327252.png 
- Transparency2 Module: https://raw.githack.com/Ruben7173/Ruben7173.github.io/master/BetterDiscord-Themes/Modules/transparency2.css - By Ruben7173#5048
- 
- The 2 items above are not owned by me, They go to there respected owners 
- */
+ Sakura theme by ziipawz / fortnutlover132.
+ Theme concept, palette, background selection, and adaptation belong to this Sakura project.
+ Based on portions of the GGO Kirito theme structure by VaporousCreeper.
+ Original transparency techniques in that source theme credit Ruben7173.
+*/
  
 /*Background  image*/
     #app-mount {
@@ -1182,19 +1180,16 @@
         background-color: var(--primary3-colour)!important; 
     }
 
-/*TopBar*/ 
-    #app-mount .title_c38106::before {
-        content: "Sakura v1.1 by ziipawz";
-        color: rgb(255,255,255,0.5);
-        font-weight: 500;
+/* Top bar */
+#app-mount .title_c38106::before {
+    content: none !important;
+    display: none !important;
+}
 
-        position: left;
-        margin-right: 10px;
-    }
-    #app-mount .title_c38106 {
-        background-color: var(--secondary3-colour);
-        border-bottom: 3px solid var(--primary3-colour)
-    }
+#app-mount .title_c38106 {
+    background-color: var(--secondary3-colour);
+    border-bottom: 3px solid var(--primary3-colour);
+}
 
 
 /* ============================================================
