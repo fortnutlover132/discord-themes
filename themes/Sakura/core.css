@@ -1184,7 +1184,7 @@
 
 /*TopBar*/ 
     #app-mount .title_c38106::before {
-        content: "GGO Kirito v1.4.1 By VaporousCreeper";
+        content: "Sakura v1.1 by ziipawz";
         color: rgb(255,255,255,0.5);
         font-weight: 500;
 
@@ -1195,3 +1195,84 @@
         background-color: var(--secondary3-colour);
         border-bottom: 3px solid var(--primary3-colour)
     }
+
+
+/* ============================================================
+   SAKURA CLEANUP LAYER
+   Keeps the original working transparency system, but removes
+   the blocky GGO message-card look.
+   ============================================================ */
+
+/* Cleaner chat: no giant rectangle behind every individual message */
+#app-mount .message__5126c {
+    padding-left: 72px;
+    padding-right: 32px;
+    background: transparent !important;
+}
+
+#app-mount .message__5126c.cozyMessage__5126c .container_b7e1cb,
+#app-mount .message__5126c.cozyMessage__5126c .contents_c19a55,
+#app-mount .message__5126c.compact_c19a55 .contents_c19a55,
+#app-mount .message__5126c.compact_c19a55 .container_b7e1cb {
+    background: transparent !important;
+}
+
+/* A subtle row tint only while hovering */
+#app-mount .message__5126c:hover {
+    background: rgba(82, 45, 64, 0.22) !important;
+}
+
+/* Keep message text readable over the Sakura image */
+#app-mount .messageContent_c19a55,
+#app-mount .markup__75297 {
+    color: rgba(255, 255, 255, 0.96) !important;
+    text-shadow: 0 1px 3px rgba(24, 12, 19, 0.9);
+}
+
+#app-mount .username_c19a55 {
+    font-weight: 650;
+    text-shadow: 0 1px 3px rgba(24, 12, 19, 0.8);
+}
+
+/* Give the whole chat ONE consistent glass sheet instead of message boxes */
+#app-mount .chatContent_f75fb0,
+#app-mount .messagesWrapper__36d07 {
+    background: rgba(48, 30, 41, 0.22) !important;
+}
+
+/* Cleaner composer */
+#app-mount .form_f75fb0 .scrollableContainer__74017 {
+    background: rgba(39, 24, 34, 0.66) !important;
+    border: 1px solid rgba(255, 151, 194, 0.62);
+    border-radius: 10px;
+}
+
+/* Softer DM/sidebar selection instead of a chunky pill */
+#app-mount .privateChannels_e6b769 .interactiveSelected__972a0,
+#app-mount .privateChannels_e6b769 .channel__972a0:hover {
+    background: rgba(226, 103, 157, 0.22) !important;
+}
+
+/* Make the user panel feel integrated with the theme */
+#app-mount .panels__5e434 {
+    background: rgba(60, 35, 50, 0.72) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 153, 196, 0.35);
+}
+
+/* Profile/member surfaces: dark glass rather than near-black slabs */
+#app-mount .container_c8ffbb,
+#app-mount .members_c8ffbb {
+    background-color: rgba(38, 23, 32, 0.58) !important;
+}
+
+/* Sakura title bar */
+#app-mount .title_c38106::before {
+    color: rgba(255, 218, 234, 0.82) !important;
+}
+
+#app-mount .title_c38106 {
+    background-color: rgba(44, 27, 38, 0.66) !important;
+    border-bottom: 2px solid rgba(255, 116, 174, 0.72) !important;
+}
