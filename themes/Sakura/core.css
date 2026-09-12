@@ -1,4 +1,4 @@
-/* SAKURA BUILD 1.4 — Made by ziipawz */
+/* SAKURA BUILD 2.0 — Made by ziipawz */
 
 :root{
      --background: url('https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/backgrounds/main.jpg');
@@ -9,17 +9,16 @@
      --primary3-colour: rgba(155,59,100,0.60);
      --primary4-colour: rgba(155,59,100,0.40);
 
-     --secondary1-colour: rgba(70,45,58,0.32);
-     --secondary2-colour: rgba(120,74,95,0.50);
-     --secondary3-colour: rgba(33,20,28,0.65);
-     --secondary4-colour: rgba(35,20,28,0.30);
+     --secondary1-colour: rgba(70,45,58,0.30);
+     --secondary2-colour: rgba(120,74,95,0.48);
+     --secondary3-colour: rgba(33,20,28,0.62);
+     --secondary4-colour: rgba(35,20,28,0.28);
  }
    
  /*
- Sakura theme by ziipawz / fortnutlover132.
- Theme concept, palette, background selection, and adaptation belong to this Sakura project.
- Based on portions of the GGO Kirito theme structure by VaporousCreeper.
- Original transparency techniques in that source theme credit Ruben7173.
+ Sakura theme made by ziipawz.
+ Uses the GGO Kirito theme by VaporousCreeper as a structural base
+ for Discord transparency/layout behavior.
 */
  
 /*Background  image*/
@@ -394,21 +393,32 @@
         #app-mount .jumpToPresentBar__0f481 {background-color: var(--secondary3-colour);}
         #app-mount .jumpToPresentBar__0f481:hover {background-color: var(--secondary2-colour);}
 
-        #app-mount .message__5126c {padding: 0px 48px 0px 72px;}
-        #app-mount .message__5126c.cozyMessage__5126c .container_b7e1cb,
+        #app-mount .message__5126c {
+            padding: 3px 48px 3px 72px;
+            background-color: transparent;
+        }
+
+        #app-mount .message__5126c.cozyMessage__5126c .container_b7e1cb {
+            background-color: transparent;
+        }
+
         #app-mount .message__5126c.cozyMessage__5126c .contents_c19a55 {
             background-color: var(--secondary1-colour);
-            padding: 5px 0px 5px 20px;
+            padding: 7px 12px;
+            border-radius: 12px;
         }
 
         #app-mount .message__5126c.compact_c19a55 {padding-left: 0;}
+
         #app-mount .message__5126c.compact_c19a55 .contents_c19a55 {
             background-color: var(--secondary1-colour);
-            padding: 5px 0px 5px 80px;
+            padding: 7px 12px 7px 80px;
             text-indent: 0;
+            border-radius: 12px;
         }
+
         #app-mount .message__5126c.compact_c19a55 .container_b7e1cb {
-            background-color: var(--secondary1-colour);
+            background-color: transparent;
             padding: 5px 0px 5px 52px;
         }
 
@@ -418,13 +428,38 @@
         }
         #app-mount .hasReply_c19a55 .buttonContainer_c19a55 .wrapper_f7ecac { margin-top: 24px; }
 
-        #app-mount .form_f75fb0 .wrapper__44df5,
-        #app-mount .form_f75fb0 .scrollableContainer__74017 {
-            background-color: var(--secondary3-colour);
+        #app-mount .form_f75fb0 {
+            background: transparent!important;
+            background-image: none!important;
+            box-shadow: none!important;
         }
 
-        #app-mount .form_f75fb0 .channelTextArea_f75fb0 { background-color: transparent; }
-        #app-mount .form_f75fb0 .channelTextArea_f75fb0 .stackedBars__74017 { background-color: var(--secondary2-colour); }
+        #app-mount .form_f75fb0::before,
+        #app-mount .form_f75fb0::after {
+            content: none!important;
+            display: none!important;
+            background: none!important;
+            box-shadow: none!important;
+        }
+
+        #app-mount .form_f75fb0 .wrapper__44df5,
+        #app-mount .form_f75fb0 .scrollableContainer__74017 {
+            background: rgba(38,23,32,0.72)!important;
+            background-image: none!important;
+            border: 1px solid rgba(255,143,189,0.72);
+            border-radius: 14px!important;
+            box-shadow: none!important;
+        }
+
+        #app-mount .form_f75fb0 .channelTextArea_f75fb0 {
+            background: transparent!important;
+            background-image: none!important;
+        }
+
+        #app-mount .form_f75fb0 .channelTextArea_f75fb0 .stackedBars__74017 {
+            background-color: var(--secondary2-colour);
+            border-radius: 12px 12px 0 0;
+        }
 
         /*Embeds*/
             #app-mount .embedFull__623de {
@@ -1182,194 +1217,53 @@
         background-color: var(--primary3-colour)!important; 
     }
 
-
-/* ============================================================
-   SAKURA POLISH LAYER
-   ============================================================ */
-
-/* ----- Top bar branding ----- */
-
-#app-mount .title_c38106::before {
-    content: "Made by ziipawz" !important;
-    display: block !important;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255, 226, 239, 0.88) !important;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    pointer-events: none;
-}
-
-#app-mount .title_c38106 {
-    background-color: rgba(48, 29, 40, 0.64) !important;
-    border-bottom: 2px solid rgba(255, 119, 176, 0.70) !important;
-}
+/*TopBar*/
+    #app-mount .title_c38106::before {
+        content: "Made by ziipawz";
+        color: rgba(255,226,239,0.82);
+        font-weight: 600;
+        margin-right: 10px;
+    }
+    #app-mount .title_c38106 {
+        background-color: var(--secondary3-colour);
+        border-bottom: 2px solid var(--primary2-colour);
+    }
 
 
-/* ----- Chat background ----- */
+/* Sakura finishing touches */
 
-#app-mount .chatContent_f75fb0,
-#app-mount .messagesWrapper__36d07 {
-    background: rgba(49, 31, 42, 0.16) !important;
-}
-
-
-/* ----- Rounded message bubbles instead of full-width slabs ----- */
-
-#app-mount .message__5126c {
-    background: transparent !important;
-    padding-top: 3px !important;
-    padding-bottom: 3px !important;
-}
-
-#app-mount .message__5126c.cozyMessage__5126c .contents_c19a55,
-#app-mount .message__5126c.compact_c19a55 .contents_c19a55 {
-    display: table !important;
-    width: auto !important;
-    max-width: calc(100% - 24px) !important;
-    background: rgba(78, 51, 65, 0.30) !important;
-    border-radius: 12px !important;
-    padding: 7px 12px !important;
-    box-shadow: inset 0 0 0 1px rgba(255, 190, 216, 0.08);
-}
-
-#app-mount .message__5126c.cozyMessage__5126c .container_b7e1cb,
-#app-mount .message__5126c.compact_c19a55 .container_b7e1cb {
-    background: transparent !important;
-}
-
-#app-mount .message__5126c:hover {
-    background: rgba(255, 143, 189, 0.06) !important;
-}
-
-#app-mount .message__5126c:hover .contents_c19a55 {
-    background: rgba(102, 58, 78, 0.38) !important;
-}
-
-#app-mount .messageContent_c19a55,
-#app-mount .markup__75297 {
-    color: rgba(255,255,255,0.97) !important;
-    text-shadow: 0 1px 2px rgba(24, 12, 18, 0.72);
-}
-
-
-/* ----- Attachments / embeds also rounded ----- */
-
-#app-mount .embedFull__623de,
-#app-mount .messageAttachment__5dae1,
-#app-mount [class*="imageWrapper_"] {
-    border-radius: 12px !important;
-}
-
-
-/* ----- Fix the ugly black gradient around the text box ----- */
-
-#app-mount .form_f75fb0,
-#app-mount .form_f75fb0::before,
-#app-mount .form_f75fb0::after,
-#app-mount [class*="channelBottomBarArea_"],
-#app-mount [class*="channelBottomBarArea_"]::before,
-#app-mount [class*="channelBottomBarArea_"]::after {
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-}
-
-
-/* Actual composer */
-
-#app-mount .form_f75fb0 .channelTextArea_f75fb0 {
-    background: transparent !important;
-    margin-bottom: 10px;
-}
-
-#app-mount .form_f75fb0 .scrollableContainer__74017 {
-    background: rgba(45, 27, 38, 0.72) !important;
-    background-image: none !important;
-    border: 1px solid rgba(255, 150, 194, 0.62) !important;
-    border-radius: 14px !important;
-    box-shadow:
-        0 4px 14px rgba(20, 10, 16, 0.16),
-        inset 0 0 0 1px rgba(255,255,255,0.025) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-
-/* ----- Sidebar: soften the giant rectangular selections ----- */
-
-#app-mount .privateChannelsHeaderContainer__99e7c,
-#app-mount .channel__972a0,
-#app-mount .containerDefault_c69b6d .wrapper__2ea32 {
-    border-radius: 12px !important;
-}
-
-#app-mount .privateChannelsHeaderContainer__99e7c {
-    background: rgba(178, 73, 120, 0.34) !important;
-}
-
-#app-mount .channel__972a0:hover,
-#app-mount .interactiveSelected__972a0 {
-    background: rgba(236, 122, 171, 0.22) !important;
-}
-
-
-/* ----- User controls ----- */
-
-#app-mount .panels__5e434 {
-    border-radius: 12px 12px 0 0 !important;
-    background: rgba(62, 36, 51, 0.76) !important;
-    border: 1px solid rgba(255, 171, 207, 0.20) !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-#app-mount .sidebar__5e434::after {
-    background: transparent !important;
-}
-
-
-/* ----- Member/profile side surface ----- */
-
-#app-mount .container_c8ffbb,
-#app-mount .members_c8ffbb {
-    background-color: rgba(39, 24, 33, 0.56) !important;
-}
-
-
-/* ----- BUILD 1.4: hard-kill Discord's composer fades/gradients ----- */
-#app-mount [class*="form_"],
-#app-mount [class*="form_"]::before,
-#app-mount [class*="form_"]::after,
+/* Current Discord can put the composer fade on one of these wrappers. */
 #app-mount [class*="channelBottomBarArea_"],
 #app-mount [class*="channelBottomBarArea_"]::before,
 #app-mount [class*="channelBottomBarArea_"]::after,
 #app-mount [class*="bottomBar_"],
 #app-mount [class*="bottomBar_"]::before,
 #app-mount [class*="bottomBar_"]::after {
-    background-image: none !important;
-    box-shadow: none !important;
+    background-image: none!important;
+    box-shadow: none!important;
 }
 
-#app-mount .form_f75fb0 {
-    background: transparent !important;
+/* Thin, rounded scrollbars. */
+#app-mount ::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px!important;
 }
 
-/* Rounded bubble look: constrain the visible tint to message content only */
-#app-mount .message__5126c .contents_c19a55 {
-    border-radius: 12px !important;
+#app-mount ::-webkit-scrollbar-thumb {
+    background-color: rgba(255,143,189,0.58)!important;
+    border: 0!important;
+    border-radius: 999px!important;
 }
 
-#app-mount .message__5126c.cozyMessage__5126c .contents_c19a55 {
-    background: rgba(78, 51, 65, 0.30) !important;
-    padding: 7px 12px !important;
+#app-mount ::-webkit-scrollbar-track,
+#app-mount ::-webkit-scrollbar-track-piece {
+    background: transparent!important;
+    border: 0!important;
 }
 
-#app-mount .message__5126c:hover .contents_c19a55 {
-    background: rgba(102, 58, 78, 0.38) !important;
+/* Slightly round common Sakura surfaces. */
+#app-mount .channel__972a0,
+#app-mount .privateChannelsHeaderContainer__99e7c,
+#app-mount .itemCard__7e549 {
+    border-radius: 12px!important;
 }
