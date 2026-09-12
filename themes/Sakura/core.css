@@ -1,4 +1,4 @@
-/* SAKURA BUILD 3.0 — Made by ziipawz */
+/* SAKURA BUILD 3.1 — Made by ziipawz */
 
 :root{
      --background: url('https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/backgrounds/main.jpg');
@@ -1299,4 +1299,132 @@
 #app-mount [class*="imageWrapper_"] {
     border-radius: 12px!important;
     overflow: hidden;
+}
+
+
+/* ============================================================
+   Sakura 3.1 polish
+   ============================================================ */
+
+/* ----- DM list: remove row/name backgrounds entirely ----- */
+#app-mount .privateChannels_e6b769 .channel__972a0,
+#app-mount .privateChannels_e6b769 .channel__972a0:hover,
+#app-mount .privateChannels_e6b769 .interactiveSelected__972a0,
+#app-mount .privateChannels_e6b769 [class*="interactiveSelected_"] {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* ----- "Find or start a conversation" pill ----- */
+#app-mount .searchBar_e6b769,
+#app-mount .searchBar__35e86,
+#app-mount [class*="searchBar_"] {
+    border-radius: 999px !important;
+}
+
+#app-mount .searchBar_e6b769 .searchBarComponent__35e86,
+#app-mount .searchBar__35e86 .searchBarComponent__35e86,
+#app-mount [class*="searchBar_"] [class*="searchBarComponent_"] {
+    background: rgba(52, 31, 43, 0.52) !important;
+    border: 1px solid rgba(255, 165, 203, 0.38) !important;
+    border-radius: 999px !important;
+    box-shadow: none !important;
+}
+
+/* ----- Composer: aggressively remove the remaining fade/gradient ----- */
+#app-mount .form_f75fb0,
+#app-mount .form_f75fb0::before,
+#app-mount .form_f75fb0::after,
+#app-mount .channelBottomBarArea_f75fb0,
+#app-mount .channelBottomBarArea_f75fb0::before,
+#app-mount .channelBottomBarArea_f75fb0::after,
+#app-mount [class*="channelBottomBarArea_"],
+#app-mount [class*="channelBottomBarArea_"]::before,
+#app-mount [class*="channelBottomBarArea_"]::after,
+#app-mount [class*="themedBackground_"],
+#app-mount [class*="themedBackground_"]::before,
+#app-mount [class*="themedBackground_"]::after,
+#app-mount [class*="chatGradient"],
+#app-mount [class*="chatGradient"]::before,
+#app-mount [class*="chatGradient"]::after,
+#app-mount [class*="gradient_"],
+#app-mount [class*="gradient_"]::before,
+#app-mount [class*="gradient_"]::after {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* Keep only the actual rounded input visible */
+#app-mount .form_f75fb0 .scrollableContainer__74017,
+#app-mount .form_f75fb0 .themedBackground__74017 {
+    background: rgba(44, 27, 38, 0.70) !important;
+    background-image: none !important;
+    border: 1px solid rgba(255, 143, 189, 0.68) !important;
+    border-radius: 14px !important;
+    box-shadow: none !important;
+}
+
+/* ----- Smooth out remaining rectangular message wrappers ----- */
+#app-mount .message__5126c,
+#app-mount .message__5126c:hover {
+    border-radius: 12px !important;
+    overflow: visible !important;
+}
+
+/* Remove inner bars/strips so the outer message card is the only shape */
+#app-mount .message__5126c .container_b7e1cb,
+#app-mount .message__5126c .contents_c19a55,
+#app-mount .message__5126c [class*="messageContent_"] {
+    box-shadow: none !important;
+}
+
+/* ----- Settings: translucent instead of an opaque charcoal slab ----- */
+#app-mount .standardSidebarView__23e6b,
+#app-mount .sidebarRegion__23e6b,
+#app-mount .contentRegion__23e6b,
+#app-mount .contentRegionScroller__23e6b,
+#app-mount .sidebarRegionScroller__23e6b,
+#app-mount [class*="standardSidebarView_"],
+#app-mount [class*="sidebarRegion_"],
+#app-mount [class*="contentRegion_"],
+#app-mount [class*="contentRegionScroller_"],
+#app-mount [class*="sidebarRegionScroller_"] {
+    background: rgba(29, 20, 27, 0.68) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Make the settings sidebar a little pinker/lighter than the content side */
+#app-mount .sidebarRegion__23e6b,
+#app-mount .sidebarRegionScroller__23e6b,
+#app-mount [class*="sidebarRegion_"],
+#app-mount [class*="sidebarRegionScroller_"] {
+    background: rgba(66, 39, 54, 0.62) !important;
+}
+
+/* Settings cards/rows stay readable but translucent */
+#app-mount .contentRegion__23e6b [class*="card_"],
+#app-mount .contentRegion__23e6b [class*="container_"] {
+    box-shadow: none;
+}
+
+/* ----- Thin scrollbar ----- */
+#app-mount ::-webkit-scrollbar {
+    width: 4px !important;
+    height: 4px !important;
+}
+
+#app-mount ::-webkit-scrollbar-thumb {
+    background: rgba(255, 143, 189, 0.58) !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+}
+
+#app-mount ::-webkit-scrollbar-track,
+#app-mount ::-webkit-scrollbar-track-piece {
+    background: transparent !important;
+    border: 0 !important;
 }
