@@ -1,48 +1,8 @@
 /**
  * @name Sakura
- * @author ziipawz
- * @version 1.1.1
- * @description A soft pink glassy Sakura-themed Discord theme.
- * @source https://github.com/fortnutlover132/discord-themes/tree/main/themes/Sakura
+ * @author ziipawz / fortnutlover132
+ * @version 1.0.0
+ * @description Soft pink Sakura BetterDiscord theme.
  */
 
-@import url("https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/core.css?v=1.1.0");
-
-:root{
-     --background: url('https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/backgrounds/main.jpg');
-     --activetext-colour: white;
- 
-     --primary1-colour: #ff8fbd;
-     --primary2-colour: rgba(255,143,189,0.50);
-     --primary3-colour: rgba(155,59,100,0.60);
-     --primary4-colour: rgba(155,59,100,0.40);
- 
-     --secondary1-colour: rgba(70,45,58,0.32);
-     --secondary2-colour: rgba(120,74,95,0.50);
-     --secondary3-colour: rgba(33,20,28,0.65);
-     --secondary4-colour: rgba(35,20,28,0.30);
-}
-
-
-    /* =========================================================
-       GLASS COLORS
-       ========================================================= */
-
-    --glass-dark: rgba(34, 24, 31, 0.72);
-    --glass-dark-soft: rgba(34, 24, 31, 0.58);
-
-    --glass-pink: rgba(111, 57, 82, 0.58);
-    --glass-pink-soft: rgba(179, 100, 136, 0.24);
-
-    --glass-light: rgba(255, 235, 244, 0.18);
-
-    --glass-border: rgba(255, 190, 216, 0.18);
-
-
-    /* =========================================================
-       HOVERS
-       ========================================================= */
-
-    --hover-pink: rgba(231, 143, 181, 0.20);
-    --selected-pink: rgba(231, 143, 181, 0.30);
-}
+@import url("https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/core.css?v=3");
