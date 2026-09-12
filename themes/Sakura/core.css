@@ -95,3 +95,109 @@
 #app-mount .sidebarRegionScroller__23e6b {
     background-color: transparent;
 }
+
+/* ============================================================
+   READABILITY / GLASS PANELS
+   ============================================================ */
+
+/* Friends / Home main content */
+#app-mount .peopleColumn__133bf,
+#app-mount .nowPlayingColumn__133bf {
+    background-color: rgba(255, 255, 255, 0.22) !important;
+    backdrop-filter: blur(8px);
+}
+
+
+/* Left DM sidebar */
+#app-mount .privateChannels_e6b769,
+#app-mount .privateChannels_e6b769 .scroller__99e7c {
+    background-color: rgba(255, 255, 255, 0.18) !important;
+    backdrop-filter: blur(8px);
+}
+
+
+/* Top bars */
+#app-mount .container__9293f,
+#app-mount .subtitleContainer_f75fb0 {
+    background-color: rgba(255, 240, 247, 0.28) !important;
+    backdrop-filter: blur(8px);
+}
+
+
+/* Search bars / inputs */
+#app-mount .searchBar__5ec2f,
+#app-mount .container__0f084,
+#app-mount .scrollableContainer__74017 {
+    background-color: rgba(255, 255, 255, 0.30) !important;
+}
+
+
+/* Friend rows */
+#app-mount .peopleListItem_cc6179 {
+    background-color: rgba(255, 255, 255, 0.10) !important;
+}
+
+#app-mount .peopleListItem_cc6179:hover {
+    background-color: rgba(255, 200, 220, 0.22) !important;
+}
+
+
+/* Active Now cards */
+#app-mount .itemCard__7e549 {
+    background-color: rgba(40, 25, 35, 0.68) !important;
+}
+
+
+/* ============================================================
+   TEXT COLORS
+   ============================================================ */
+
+/* Main text */
+#app-mount,
+#app-mount .title_b6c092,
+#app-mount .username_c19a55,
+#app-mount .name__2ea32,
+#app-mount .content__908e2 {
+    color: #3a2632 !important;
+}
+
+
+/* Secondary / muted text */
+#app-mount .text__19b6d,
+#app-mount .subtext__339d0,
+#app-mount .description__7d20c,
+#app-mount .timestamp_c19a55 {
+    color: #6e5564 !important;
+}
+
+
+/* Friend names */
+#app-mount .username__0a06e,
+#app-mount .name__20a53 {
+    color: #35232e !important;
+    font-weight: 600;
+}
+
+
+/* Sidebar / navigation text */
+#app-mount .linkButtonIcon__972a0,
+#app-mount .channelName__972a0,
+#app-mount .privateChannelsHeaderContainer__99e7c {
+    color: #5a3d4d !important;
+}
+
+
+/* Icons */
+#app-mount svg {
+    color: #654554;
+}
+
+
+/* ============================================================
+   OPTIONAL TEXT SHADOW
+   ============================================================ */
+
+#app-mount .peopleColumn__133bf,
+#app-mount .privateChannels_e6b769 {
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55);
+}
