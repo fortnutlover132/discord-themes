@@ -1,4 +1,4 @@
-/* SAKURA BUILD 2.0 — Made by ziipawz */
+/* SAKURA BUILD 3.0 — Made by ziipawz */
 
 :root{
      --background: url('https://raw.githubusercontent.com/fortnutlover132/discord-themes/main/themes/Sakura/backgrounds/main.jpg');
@@ -17,8 +17,7 @@
    
  /*
  Sakura theme made by ziipawz.
- Uses the GGO Kirito theme by VaporousCreeper as a structural base
- for Discord transparency/layout behavior.
+ Built using the GGO Kirito theme structure as a technical base.
 */
  
 /*Background  image*/
@@ -394,66 +393,59 @@
         #app-mount .jumpToPresentBar__0f481:hover {background-color: var(--secondary2-colour);}
 
         #app-mount .message__5126c {
-            padding: 3px 48px 3px 72px;
-            background-color: transparent;
-        }
-
-        #app-mount .message__5126c.cozyMessage__5126c .container_b7e1cb {
-            background-color: transparent;
-        }
-
-        #app-mount .message__5126c.cozyMessage__5126c .contents_c19a55 {
-            background-color: var(--secondary1-colour);
-            padding: 7px 12px;
+            margin: 5px 10px 5px 8px;
+            padding: 8px 48px 8px 72px;
+            background-color: rgba(72,46,59,0.30);
+            border: 1px solid rgba(255,190,216,0.10);
             border-radius: 12px;
         }
 
-        #app-mount .message__5126c.compact_c19a55 {padding-left: 0;}
-
-        #app-mount .message__5126c.compact_c19a55 .contents_c19a55 {
-            background-color: var(--secondary1-colour);
-            padding: 7px 12px 7px 80px;
-            text-indent: 0;
-            border-radius: 12px;
+        #app-mount .message__5126c:hover {
+            background-color: rgba(92,54,72,0.42);
         }
 
+        #app-mount .message__5126c.cozyMessage__5126c .container_b7e1cb,
+        #app-mount .message__5126c.cozyMessage__5126c .contents_c19a55,
+        #app-mount .message__5126c.compact_c19a55 .contents_c19a55,
         #app-mount .message__5126c.compact_c19a55 .container_b7e1cb {
             background-color: transparent;
-            padding: 5px 0px 5px 52px;
+            padding: 0;
+        }
+
+        #app-mount .message__5126c.compact_c19a55 {
+            padding-left: 72px;
+            text-indent: 0;
         }
 
         #app-mount .buttonContainer_c19a55 .wrapper_f7ecac {
             background-color: var(--secondary1-colour);
             margin: 2px 20px 0px 0px;
+            border-radius: 8px;
         }
+
         #app-mount .hasReply_c19a55 .buttonContainer_c19a55 .wrapper_f7ecac { margin-top: 24px; }
 
-        #app-mount .form_f75fb0 {
-            background: transparent!important;
-            background-image: none!important;
-            box-shadow: none!important;
-        }
-
+        #app-mount .form_f75fb0,
         #app-mount .form_f75fb0::before,
         #app-mount .form_f75fb0::after {
-            content: none!important;
-            display: none!important;
-            background: none!important;
-            box-shadow: none!important;
-        }
-
-        #app-mount .form_f75fb0 .wrapper__44df5,
-        #app-mount .form_f75fb0 .scrollableContainer__74017 {
-            background: rgba(38,23,32,0.72)!important;
+            background: transparent!important;
             background-image: none!important;
-            border: 1px solid rgba(255,143,189,0.72);
-            border-radius: 14px!important;
             box-shadow: none!important;
         }
 
         #app-mount .form_f75fb0 .channelTextArea_f75fb0 {
             background: transparent!important;
             background-image: none!important;
+        }
+
+        #app-mount .form_f75fb0 .wrapper__44df5,
+        #app-mount .form_f75fb0 .scrollableContainer__74017,
+        #app-mount .form_f75fb0 .themedBackground__74017 {
+            background: rgba(39,24,34,0.68)!important;
+            background-image: none!important;
+            border: 1px solid rgba(255,143,189,0.68);
+            border-radius: 14px!important;
+            box-shadow: none!important;
         }
 
         #app-mount .form_f75fb0 .channelTextArea_f75fb0 .stackedBars__74017 {
@@ -1224,33 +1216,43 @@
         font-weight: 600;
         margin-right: 10px;
     }
+
     #app-mount .title_c38106 {
         background-color: var(--secondary3-colour);
         border-bottom: 2px solid var(--primary2-colour);
     }
 
 
-/* Sakura finishing touches */
+/* ============================================================
+   Sakura 3.0 finishing rules
+   ============================================================ */
 
-/* Current Discord can put the composer fade on one of these wrappers. */
+/* Kill any remaining composer fade / black gradient. */
+#app-mount {
+    --custom-channel-textarea-text-area-gradient: none !important;
+}
+
+#app-mount .channelBottomBarArea_f75fb0,
+#app-mount .channelBottomBarArea_f75fb0::before,
+#app-mount .channelBottomBarArea_f75fb0::after,
 #app-mount [class*="channelBottomBarArea_"],
 #app-mount [class*="channelBottomBarArea_"]::before,
 #app-mount [class*="channelBottomBarArea_"]::after,
-#app-mount [class*="bottomBar_"],
-#app-mount [class*="bottomBar_"]::before,
-#app-mount [class*="bottomBar_"]::after {
+#app-mount [class*="themedBackground_"],
+#app-mount [class*="themedBackground_"]::before,
+#app-mount [class*="themedBackground_"]::after {
     background-image: none!important;
     box-shadow: none!important;
 }
 
-/* Thin, rounded scrollbars. */
+/* Thin scrollbar */
 #app-mount ::-webkit-scrollbar {
-    width: 6px!important;
-    height: 6px!important;
+    width: 4px!important;
+    height: 4px!important;
 }
 
 #app-mount ::-webkit-scrollbar-thumb {
-    background-color: rgba(255,143,189,0.58)!important;
+    background-color: rgba(255,143,189,0.62)!important;
     border: 0!important;
     border-radius: 999px!important;
 }
@@ -1261,9 +1263,40 @@
     border: 0!important;
 }
 
-/* Slightly round common Sakura surfaces. */
-#app-mount .channel__972a0,
-#app-mount .privateChannelsHeaderContainer__99e7c,
-#app-mount .itemCard__7e549 {
+/* DM rows always keep the "hovered" styled background. */
+#app-mount .privateChannels_e6b769 .channel__972a0 {
+    background: rgba(104,61,82,0.18)!important;
     border-radius: 12px!important;
+}
+
+#app-mount .privateChannels_e6b769 .channel__972a0:hover,
+#app-mount .privateChannels_e6b769 .interactiveSelected__972a0 {
+    background: rgba(174,79,121,0.34)!important;
+}
+
+/* Keep Discord's DM nameplate / avatar decorations visible even when not hovered. */
+#app-mount .privateChannels_e6b769 .channel__972a0 [class*="nameplated"],
+#app-mount .privateChannels_e6b769 .channel__972a0 [class*="nameplate_"],
+#app-mount .privateChannels_e6b769 .channel__972a0 [class*="avatarDecoration"],
+#app-mount .privateChannels_e6b769 .channel__972a0 [class*="profileEffects"],
+#app-mount .privateChannels_e6b769 .channel__972a0 [class*="fadeIn"] {
+    opacity: 1!important;
+    visibility: visible!important;
+    display: block!important;
+}
+
+/* Preserve display-name gradient/effects instead of muting them. */
+#app-mount .privateChannels_e6b769 .channel__972a0 [class*="usernameGradient"],
+#app-mount .privateChannels_e6b769 .channel__972a0 [class*="twoColorGradient"],
+#app-mount .privateChannels_e6b769 .channel__972a0 [class*="convenienceGlowGradient"] {
+    opacity: 1!important;
+    visibility: visible!important;
+}
+
+/* Round attachments / embeds so they match the message cards. */
+#app-mount .embedFull__623de,
+#app-mount .messageAttachment__5dae1,
+#app-mount [class*="imageWrapper_"] {
+    border-radius: 12px!important;
+    overflow: hidden;
 }
