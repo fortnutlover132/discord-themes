@@ -2,69 +2,53 @@
  * ============================================================
  * Sakura Theme — Core
  * ============================================================
- *
- * Main styling for the Sakura Discord theme.
- * Customize colors/backgrounds in Sakura.theme.css
- * ============================================================
  */
 
 
 /* ============================================================
-   DISCORD BACKGROUND VARIABLES
+   BACKGROUND
    ============================================================ */
 
-:root,
-.theme-dark,
-.theme-light {
-
-    /* Main Discord surfaces */
-    --background-base-lowest: rgba(24, 16, 23, 0.72) !important;
-    --background-base-lower: rgba(28, 18, 27, 0.66) !important;
-    --background-base-low: rgba(32, 21, 31, 0.60) !important;
-    --background-base-high: rgba(40, 25, 38, 0.70) !important;
-    --background-base-higher: rgba(46, 28, 43, 0.76) !important;
-    --background-base-highest: rgba(52, 31, 48, 0.82) !important;
-
-    /* Older / fallback Discord variables */
-    --background-primary: rgba(30, 20, 29, 0.60) !important;
-    --background-secondary: rgba(28, 18, 27, 0.68) !important;
-    --background-secondary-alt: rgba(36, 22, 34, 0.74) !important;
-    --background-tertiary: rgba(24, 16, 23, 0.76) !important;
-
-    /* Interactive surfaces */
-    --background-modifier-hover: rgba(245, 166, 200, 0.12) !important;
-    --background-modifier-active: rgba(245, 166, 200, 0.18) !important;
-    --background-modifier-selected: rgba(245, 166, 200, 0.22) !important;
-
-    /* Inputs */
-    --input-background: rgba(20, 14, 20, 0.48) !important;
-    --input-background-default: rgba(20, 14, 20, 0.48) !important;
-}
-
-
-/* ============================================================
-   WALLPAPER
-   ============================================================ */
-
-html,
-body,
 #app-mount {
-    background: var(--background) center / cover no-repeat fixed !important;
+    background: var(--background);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Discord's outer app layer */
+
+#app-mount .bg__960e4,
+#app-mount .app__160d8 {
+    background-color: var(--secondary4-colour);
 }
 
 
 /* ============================================================
-   MAKE MAJOR DISCORD WRAPPERS TRANSPARENT
+   FRIENDS / HOME PAGE
    ============================================================ */
 
-#app-mount > div,
-[class*="appMount"],
-[class*="app_"],
-[class*="bg_"],
-[class*="layers_"],
-[class*="layer_"],
-[class*="base_"] {
-    background-color: transparent !important;
+#app-mount .container__133bf,
+#app-mount .container__133bf .container__9293f,
+#app-mount .container__133bf .tabBody__133bf,
+#app-mount .container__133bf .container__7d20c,
+#app-mount .container__133bf .nowPlayingColumn__133bf {
+    background-color: transparent;
+}
+
+
+/* ============================================================
+   LEFT DM SIDEBAR
+   ============================================================ */
+
+#app-mount .privateChannels_e6b769,
+#app-mount .privateChannels_e6b769 .scroller__99e7c {
+    background-color: transparent;
+}
+
+#app-mount .sidebarList__5e434.sidebarListRounded__5e434 .container__2637a {
+    background-color: transparent;
 }
 
 
@@ -72,174 +56,42 @@ body,
    SERVER LIST
    ============================================================ */
 
-[class*="guilds_"] {
-    background: rgba(24, 16, 23, 0.72) !important;
-    backdrop-filter: blur(8px);
+#app-mount .wrapper_ef3116.guilds__5e434 {
+    background-color: transparent;
 }
 
 
 /* ============================================================
-   LEFT SIDEBAR
+   CHAT
    ============================================================ */
 
-[class*="sidebar_"],
-[class*="privateChannels_"] {
-    background: rgba(28, 18, 27, 0.66) !important;
-    backdrop-filter: blur(8px);
+#app-mount .chatContent_f75fb0,
+#app-mount .chat_f75fb0,
+#app-mount .chatContent_f75fb0 .wrapper_d852db,
+#app-mount .chatContent_f75fb0 .wrapper_d852db .wrapper_fc8177 {
+    background-color: transparent;
 }
 
 
 /* ============================================================
-   MAIN CONTENT
+   SERVER MEMBER LIST
    ============================================================ */
 
-[class*="chat_"],
-[class*="peopleColumn_"],
-[class*="tabBody_"] {
-    background: rgba(30, 20, 29, 0.48) !important;
-    backdrop-filter: blur(5px);
+#app-mount .container_c8ffbb,
+#app-mount .members_c8ffbb {
+    background-color: transparent;
 }
 
 
 /* ============================================================
-   RIGHT SIDEBAR / MEMBER LIST / ACTIVE NOW
+   SETTINGS
    ============================================================ */
 
-[class*="members_"],
-[class*="nowPlayingColumn_"] {
-    background: rgba(28, 18, 27, 0.58) !important;
-    backdrop-filter: blur(7px);
-}
-
-
-/* ============================================================
-   TOP BARS
-   ============================================================ */
-
-[class*="title_"],
-[class*="subtitleContainer_"] {
-    background: rgba(32, 20, 30, 0.64) !important;
-    backdrop-filter: blur(8px);
-}
-
-
-/* ============================================================
-   USER PANEL
-   ============================================================ */
-
-[class*="panels_"] {
-    background: rgba(38, 22, 36, 0.76) !important;
-    backdrop-filter: blur(10px);
-}
-
-
-/* ============================================================
-   MESSAGE BOX
-   ============================================================ */
-
-[class*="channelTextArea_"],
-[class*="scrollableContainer_"] {
-    background: rgba(34, 22, 32, 0.62) !important;
-    backdrop-filter: blur(8px);
-}
-
-
-/* ============================================================
-   CARDS
-   ============================================================ */
-
-[class*="peopleListItem_"] {
-    background: transparent !important;
-}
-
-[class*="peopleListItem_"]:hover {
-    background: rgba(245, 166, 200, 0.08) !important;
-}
-
-
-/* ============================================================
-   LINKS
-   ============================================================ */
-
-a {
-    color: var(--accent) !important;
-}
-
-a:hover {
-    color: var(--accent-light) !important;
-}
-
-
-/* ============================================================
-   BUTTONS
-   ============================================================ */
-
-[class*="colorBrand_"][class*="lookFilled_"] {
-    background: var(--accent) !important;
-}
-
-[class*="colorBrand_"][class*="lookFilled_"]:hover {
-    background: var(--accent-dark) !important;
-}
-
-
-/* ============================================================
-   CHANNEL HOVER / SELECTED
-   ============================================================ */
-
-[class*="wrapper_"]:hover [class*="link_"] {
-    background: var(--accent-transparent) !important;
-}
-
-[class*="modeSelected_"] [class*="link_"] {
-    background: var(--accent-transparent-dark) !important;
-}
-
-
-/* ============================================================
-   MENTIONS
-   ============================================================ */
-
-.mention {
-    background: var(--accent-transparent) !important;
-    color: var(--accent-light) !important;
-}
-
-.mention:hover {
-    background: var(--accent) !important;
-    color: white !important;
-}
-
-
-/* ============================================================
-   SCROLLBARS
-   ============================================================ */
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--accent-transparent-dark) !important;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent !important;
-}
-
-
-/* ============================================================
-   SELECTION
-   ============================================================ */
-
-::selection {
-    background: var(--accent);
-    color: white;
-}
-
-
-/* ============================================================
-   POPUPS
-   ============================================================ */
-
-[class*="menu_"],
-[class*="root_"][role="dialog"] {
-    background: rgba(30, 18, 28, 0.90) !important;
-    backdrop-filter: blur(15px);
+#app-mount .standardSidebarView__23e6b,
+#app-mount .sidebarRegion__23e6b,
+#app-mount .contentRegion__23e6b,
+#app-mount .layer__960e4,
+#app-mount .contentRegionScroller__23e6b,
+#app-mount .sidebarRegionScroller__23e6b {
+    background-color: transparent;
 }
